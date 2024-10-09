@@ -128,6 +128,7 @@
         "type": "table",
         "id": 2,
         "label": "Rating Information",
+        "footer":"",
         "rows": [
             {
                 "bgColor": "#ffffff",
@@ -252,12 +253,26 @@
         "type": "text",
         "id": 3,
         "label": "My label",
+        "editable": true,
         "styles":{
             "margin": {
-                "right": "10px",
-                "left": "5px"
+                "right": "65px",
+                "top": "10px"
             }
         },
         "link": "https://google.com"
+    },
+    {
+        "type": "text",
+        "id": 4,
+        "label": "My label 2",
+        "editable": true,
+        "styles":{
+            "margin": {
+                "right": "65px",
+                "top": "20px"
+            }
+        },
+        "link": "https://www.youtube.com/"
     }
 ]
