@@ -12,13 +12,12 @@ const TextComponent: React.FC<Props> = ({ textData }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [label, setLabel] = useState(textData.label);
 
-    // we are getting styles from the data.json
     const marginStyle: React.CSSProperties = {
         ...(textData?.styles?.margin?.right && { marginRight: textData.styles.margin.right }),
         ...(textData?.styles?.margin?.left && { marginLeft: textData.styles.margin.left }),
         ...(textData?.styles?.margin?.top && { marginTop: textData.styles.margin.top }),
         ...(textData?.styles?.margin?.bottom && { marginBottom: textData.styles.margin.bottom }),
-        ...(textData.styles.textAlignment && {float:textData.styles.textAlignment}) 
+        textAlign: textData?.styles?.textAlignment || "left"
     };
 
     const handleTextClick = () => {
@@ -52,7 +51,7 @@ const TextComponent: React.FC<Props> = ({ textData }) => {
                     autoFocus
                 />
             ) : (
-                <Text onClick={handleTextClick} style={{ cursor: textData.isEditable ? 'text' : 'default' }}>
+                <Text onClick={handleTextClick} style={{ cursor: textData.isEditable ? 'text' : 'default', textAlign: marginStyle.textAlign }}>
                     {label}
                 </Text>
             )}
