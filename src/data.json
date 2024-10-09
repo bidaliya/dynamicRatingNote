@@ -1,0 +1,263 @@
+[
+    {
+        "type": "table",
+        "id": 1,
+        "label": "Rating Information",
+        "footer": "Note: FY24 (Prov.) is Provisional",
+        "rows": [
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Name of the Entity",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "XX",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Date of Last Press Release",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "XX",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Date of receipt of complete information",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "XX",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Review Period",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "FY23 (Audited) and FY24(Prov.)",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Type of Rating",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Bank Loan Rating / Issuer/FD (Surveillance)",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Instrument",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Bank Facilities/NCD/Issuer/FD",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Amount of Facility to be rated",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Rs. XX crore",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Long Term",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Term Loan: Rs. XX crore",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Short Term",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Bank Guarantee: Rs. XX crore",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "table",
+        "id": 2,
+        "label": "Rating Information",
+        "rows": [
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Name of the Entity",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "XX",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Date of Last Press Release",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "XX",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Date of receipt of complete information",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "XX",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Review Period",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "FY23 (Audited) and FY24(Prov.)",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Type of Rating",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Bank Loan Rating / Issuer/FD (Surveillance)",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Instrument",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Bank Facilities/NCD/Issuer/FD",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Amount of Facility to be rated",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Rs. XX crore",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Long Term",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Term Loan: Rs. XX crore",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "bgColor": "#ffffff",
+                "data": [
+                    {
+                        "value": "Short Term",
+                        "bgColor": "#ffffff"
+                    },
+                    {
+                        "value": "Bank Guarantee: Rs. XX crore",
+                        "bgColor": "#ffffff"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "id": 3,
+        "label": "My label",
+        "styles":{
+            "margin": {
+                "right": "10px",
+                "left": "5px"
+            }
+        },
+        "link": "https://google.com"
+    }
+]
