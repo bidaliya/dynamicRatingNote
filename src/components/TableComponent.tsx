@@ -50,6 +50,11 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
         };
     });
 
+    const flexStyle = {
+        display: 'flex',
+        justifyContent: 'space-between',
+    };
+
     return (
         <div key={tableData.id} style={{ position: 'relative' }}>
             <Table
@@ -58,8 +63,8 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                 pagination={false}
                 className="custom-bold-border"
                 title={() => (
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        {tableData.label}
+                    <div style={{ ...flexStyle, ...tableData.label.styles }}>
+                        <span style={{ color: tableData.label.styles.color }}>{tableData.label.text}</span>
                         <MenuComponent
                             menuItems={menuItems}
                             handleMenuClick={handleMenuClick}
@@ -68,9 +73,9 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                         />
                     </div>
                 )}
-                footer={tableData.footer ? () => (
-                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        {tableData.footer}
+                footer={tableData.footer?.text?.trim() ? () => (
+                    <div style={{ display: 'flex', justifyContent: 'space-between', ...tableData.footer.styles }}>
+                        {tableData.footer.text}
                     </div>
                 ) : undefined}
             />
