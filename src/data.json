@@ -294,7 +294,7 @@
     "isEditable": true,
     "styles": {
       "margin": {
-        "right": "65px",
+        "left": "400px",
         "top": "20px"
       }
     },
