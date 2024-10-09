@@ -4,14 +4,16 @@ import { MoreOutlined } from "@ant-design/icons";
 
 interface Props {
     menuItems: MenuProps['items'];
-    handleMenuClick: MenuProps['onClick'];
+    tableId: number;
+    handleMenuClick: (tableId:number)=> void;
     open: boolean;
     onOpenChange: (flag: boolean) => void;
 }
 
-const MenuComponent: React.FC<Props> = ({ menuItems, handleMenuClick, open, onOpenChange }) => (
+const MenuComponent: React.FC<Props> = ({ menuItems,tableId, handleMenuClick, open, onOpenChange }) => (
     <Dropdown
-        menu={{ items: menuItems, onClick: handleMenuClick }}
+        menu={{ items: menuItems, onClick: () => handleMenuClick(tableId) }}
+        
         trigger={['click']}
         open={open}
         onOpenChange={onOpenChange}

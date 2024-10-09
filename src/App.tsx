@@ -1,5 +1,5 @@
 import './App.css'
-import DynamicScreen from './components/DynamicScreeen'
+import DynamicScreen from './components/DynamicScreen'
 import { DynamicComponent } from './DataInterface';
 import componentsData from './data.json' 
 
