@@ -277,12 +277,13 @@
     "type": "text",
     "id": 3,
     "label": "My label",
-    "editable": true,
+    "isEditable": true,
     "styles": {
       "margin": {
         "right": "65px",
         "top": "10px"
-      }
+      },
+      "alignment": "left"
     },
     "link": "https://google.com"
   },
@@ -290,7 +291,7 @@
     "type": "text",
     "id": 4,
     "label": "My label 2",
-    "editable": true,
+    "isEditable": true,
     "styles": {
       "margin": {
         "right": "65px",

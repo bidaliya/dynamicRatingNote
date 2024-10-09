@@ -18,10 +18,11 @@ const TextComponent: React.FC<Props> = ({ textData }) => {
         ...(textData?.styles?.margin?.left && { marginLeft: textData.styles.margin.left }),
         ...(textData?.styles?.margin?.top && { marginTop: textData.styles.margin.top }),
         ...(textData?.styles?.margin?.bottom && { marginBottom: textData.styles.margin.bottom }),
+        ...(textData.styles.textAlignment && {float:textData.styles.textAlignment}) 
     };
 
     const handleTextClick = () => {
-        if (textData.editable) {
+        if (textData.isEditable) {
             setIsEditing(true);
         }
     };
@@ -51,7 +52,7 @@ const TextComponent: React.FC<Props> = ({ textData }) => {
                     autoFocus
                 />
             ) : (
-                <Text onClick={handleTextClick} style={{ cursor: textData.editable ? 'text' : 'default' }}>
+                <Text onClick={handleTextClick} style={{ cursor: textData.isEditable ? 'text' : 'default' }}>
                     {label}
                 </Text>
             )}

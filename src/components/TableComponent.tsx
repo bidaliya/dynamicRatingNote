@@ -7,7 +7,7 @@ import MenuComponent from "./MenuComponent";
 interface Props {
     tableData: TableData;
     menuItems: MenuProps['items'];
-    handleMenuClick: MenuProps['onClick'];
+    handleMenuClick: (tableId:number)=> void; 
 }
 
 const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick }) => {
@@ -26,13 +26,7 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
             const bgColor = cellData?.bgColor || '#ffffff'; 
 
             return (
-                <div
-                    style={{
-                        backgroundColor: bgColor,
-                        padding: '8px',
-                        width: '400px',
-                    }}
-                >
+                <div style={{ backgroundColor: bgColor, padding: '8px', width: '400px' }}>
                     {text}
                 </div>
             );
@@ -63,10 +57,11 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                 pagination={false}
                 className="custom-bold-border"
                 title={() => (
-                    <div style={{ ...flexStyle, ...tableData.label.styles }}>
-                        <span style={{ color: tableData.label.styles.color }}>{tableData.label.text}</span>
+                    <div style={{ ...flexStyle}}>
+                        <span style={{ color: tableData.label?.styles?.color??'black' }}>{tableData.label.text}</span>
                         <MenuComponent
                             menuItems={menuItems}
+                            tableId = {tableData.id}
                             handleMenuClick={handleMenuClick}
                             open={openDropdown}
                             onOpenChange={handleOpenChange}
@@ -74,7 +69,7 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                     </div>
                 )}
                 footer={tableData.footer?.text?.trim() ? () => (
-                    <div style={{ display: 'flex', justifyContent: 'space-between', ...tableData.footer.styles }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between'}}>
                         {tableData.footer.text}
                     </div>
                 ) : undefined}
