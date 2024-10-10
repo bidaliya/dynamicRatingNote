@@ -515,7 +515,8 @@
     "styles": {
       "margin": {
         "right": "65px",
-        "top": "10px"
+        "top": "10px",
+        "left": "300px"
       },
       "alignment": "left"
     },
