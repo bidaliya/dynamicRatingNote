@@ -7,7 +7,7 @@ import MenuComponent from "./MenuComponent";
 interface Props {
     tableData: TableData;
     menuItems: MenuProps['items'];
-    handleMenuClick: (tableId:number)=> void; 
+    handleMenuClick: (tableId: number) => void;
 }
 
 const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick }) => {
@@ -22,8 +22,8 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
         dataIndex: `col${index + 1}`,
         key: `col${index + 1}`,
         render: (text: string, record: any) => {
-            const cellData = tableData.rows[record.key + 1]?.data[index]; 
-            const bgColor = cellData?.bgColor || '#ffffff'; 
+            const cellData = tableData.rows[record.key + 1]?.data[index];
+            const bgColor = cellData?.bgColor || '#ffffff';
 
             return (
                 <div style={{ backgroundColor: bgColor, padding: '8px', width: '400px' }}>
@@ -56,12 +56,16 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                 columns={columns}
                 pagination={false}
                 className="custom-bold-border"
+                scroll={{ y: 600 }}
+                style={{width:"80%"}}
                 title={() => (
-                    <div style={{ ...flexStyle}}>
-                        <span style={{ color: tableData.label?.styles?.color??'black' }}>{tableData.label.text}</span>
+                    <div style={{ ...flexStyle }}>
+                        <span style={{ color: tableData.label?.styles?.color ?? 'black' }}>
+                            {tableData.label.text}
+                        </span>
                         <MenuComponent
                             menuItems={menuItems}
-                            tableId = {tableData.id}
+                            tableId={tableData.id}
                             handleMenuClick={handleMenuClick}
                             open={openDropdown}
                             onOpenChange={handleOpenChange}
@@ -69,7 +73,7 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                     </div>
                 )}
                 footer={tableData.footer?.text?.trim() ? () => (
-                    <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         {tableData.footer.text}
                     </div>
                 ) : undefined}
