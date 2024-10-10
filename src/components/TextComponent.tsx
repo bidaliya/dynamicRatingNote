@@ -49,6 +49,7 @@ const TextComponent: React.FC<Props> = ({ textData }) => {
                     onBlur={handleInputBlur}
                     onKeyPress={handleKeyPress}
                     autoFocus
+                    style={{width:"100%"}}
                 />
             ) : (
                 <Text onClick={handleTextClick} style={{ cursor: textData.isEditable ? 'text' : 'default', textAlign: marginStyle.textAlign }}>
