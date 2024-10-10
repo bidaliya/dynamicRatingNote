@@ -13,8 +13,7 @@ import {
   export const handleDownloadClick = (
     componentsData: Array<TableComponent | TextComponent>
   ) => {
-    // Convert pixels to inches
-    const pxToInches = (px: number) => px / 96;
+    const pxToTwips = (px: number) => (px / 96) * 1440 * 0.5;
   
     const doc = new Document({
       sections: [
@@ -26,7 +25,6 @@ import {
                 const table = component as TableComponent;
                 const rows = table.rows || [];
   
-                // Create a label paragraph for the table with margins
                 const labelParagraph = new Paragraph({
                   children: [
                     new TextRun({
@@ -36,21 +34,20 @@ import {
                         : "000000",
                     }),
                   ],
-                  // Set margins using `indent` for left/right and `spacing` for top/bottom
                   indent: {
                     left: table.label?.styles?.margin?.left
-                      ? Math.round(pxToInches(parseInt(table.label.styles.margin.left)) * 1440)
+                      ? Math.round(pxToTwips(parseInt(table.label.styles.margin.left)))
                       : 0,
                     right: table.label?.styles?.margin?.right
-                      ? Math.round(pxToInches(parseInt(table.label.styles.margin.right)) * 1440)
+                      ? Math.round(pxToTwips(parseInt(table.label.styles.margin.right)))
                       : 0,
                   },
                   spacing: {
                     before: table.label?.styles?.margin?.top
-                      ? Math.round(pxToInches(parseInt(table.label.styles.margin.top)) * 1440)
+                      ? Math.round(pxToTwips(parseInt(table.label.styles.margin.top)))
                       : 0,
                     after: table.label?.styles?.margin?.bottom
-                      ? Math.round(pxToInches(parseInt(table.label.styles.margin.bottom)) * 1440)
+                      ? Math.round(pxToTwips(parseInt(table.label.styles.margin.bottom)))
                       : 0,
                   },
                 });
@@ -58,11 +55,11 @@ import {
                 if (rows.length === 0) {
                   return [
                     labelParagraph,
+                    new Paragraph(`No data available for this table.`),
                     new Paragraph(""),
                   ];
                 }
   
-                // Ensure to use the first row for the header
                 const headerRow = new TableRow({
                   children: rows[0].data.map(
                     (col) =>
@@ -85,7 +82,6 @@ import {
                   ),
                 });
   
-                // Create rows for all rows except the first one (header)
                 const dataRows = rows.slice(1).map((row) => {
                   return new TableRow({
                     children: row.data.map(
@@ -109,7 +105,6 @@ import {
                   });
                 });
   
-                // Prepare the footer for the table if present
                 const footerParagraph = table.footer?.text
                   ? new Paragraph({
                       children: [
@@ -123,44 +118,40 @@ import {
                     })
                   : null;
   
-                // Return label, table rows, and footer
                 return [
                   labelParagraph,
                   new Table({
                     rows: [headerRow, ...dataRows],
                   }),
-                  footerParagraph ? footerParagraph : new Paragraph(""), 
+                  footerParagraph ? footerParagraph : new Paragraph(""),
                 ];
               }),
-            // Handle text components
             ...componentsData
               .filter((component) => component.type === "text")
               .map((component) => {
                 const textComponent = component as TextComponent;
   
-                // Create a paragraph for the text component with margins
                 return new Paragraph({
                   children: [
                     new TextRun({
                       text: textComponent.label,
                     }),
                   ],
-                  // Set margins using `indent` for left/right and `spacing` for top/bottom
                   indent: {
                     left: textComponent.styles?.margin?.left
-                      ? Math.round(pxToInches(parseInt(textComponent.styles.margin.left)) * 1440)
-                      : 0, // Default left margin
+                      ? Math.round(pxToTwips(parseInt(textComponent.styles.margin.left)))
+                      : 0,
                     right: textComponent.styles?.margin?.right
-                      ? Math.round(pxToInches(parseInt(textComponent.styles.margin.right)) * 1440)
-                      : 0, // Default right margin
+                      ? Math.round(pxToTwips(parseInt(textComponent.styles.margin.right)))
+                      : 0,
                   },
                   spacing: {
                     before: textComponent.styles?.margin?.top
-                      ? Math.round(pxToInches(parseInt(textComponent.styles.margin.top)) * 1440)
-                      : 0, // Default top margin
+                      ? Math.round(pxToTwips(parseInt(textComponent.styles.margin.top)))
+                      : 0,
                     after: textComponent.styles?.margin?.bottom
-                      ? Math.round(pxToInches(parseInt(textComponent.styles.margin.bottom)) * 1440)
-                      : 0, // Default bottom margin
+                      ? Math.round(pxToTwips(parseInt(textComponent.styles.margin.bottom)))
+                      : 0,
                   },
                 });
               }),
