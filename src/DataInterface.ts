@@ -13,6 +13,7 @@ export interface Styles {
 export interface ColumnData {
   value: string;
   bgColor: string;
+  styling: Styles;
 }
 
 export interface TableRow {

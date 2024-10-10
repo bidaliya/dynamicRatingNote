@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuProps, notification } from "antd";
+import { Button, MenuProps, notification } from "antd";
 import {
   Props,
   TableComponent as TableData,
@@ -7,6 +7,7 @@ import {
 } from "../DataInterface";
 import TableComponent from "./TableComponent";
 import TextComponent from "./TextComponent";
+import { handleDownloadClick } from "./utilities/generateDocument";
 
 const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
   const menuItems: MenuProps["items"] = [
@@ -24,6 +25,10 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
     });
   };
 
+  const downloadHandler = () => {
+    handleDownloadClick(componentsData);
+  };
+
   return (
     <div>
       {componentsData.map((component) =>
@@ -38,6 +43,9 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
           <TextComponent key={component.id} textData={component as TextData} />
         )
       )}
+      <Button type="primary" onClick={downloadHandler}>
+        Download DOCX
+      </Button>
     </div>
   );
 };

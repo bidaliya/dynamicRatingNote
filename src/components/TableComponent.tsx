@@ -57,7 +57,7 @@ const TableComponent: React.FC<Props> = ({ tableData, menuItems, handleMenuClick
                 pagination={false}
                 className="custom-bold-border"
                 scroll={{ y: 600 }}
-                style={{width:"80%"}}
+                style={{width:"70%"}}
                 title={() => (
                     <div style={{ ...flexStyle }}>
                         <span style={{ color: tableData.label?.styles?.color ?? 'black' }}>
