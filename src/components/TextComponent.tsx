@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Typography, Button, Input } from "antd";
 import { TextComponent as TextData } from "../DataInterface";
 
@@ -6,11 +6,12 @@ const { Text } = Typography;
 
 interface Props {
     textData: TextData;
+    setData : (data: { key: number; value: string }) => void;
 }
 
-const TextComponent: React.FC<Props> = ({ textData }) => {
-    const [isEditing, setIsEditing] = useState(false);
-    const [label, setLabel] = useState(textData.label);
+const TextComponent: React.FC<Props> = ({ textData , setData }) => {
+    const [isEditing, setIsEditing] = useState<boolean>(false);
+    const [label, setLabel] = useState<string>(textData.label);
 
     const marginStyle: React.CSSProperties = {
         ...(textData?.styles?.margin?.right && { marginRight: textData.styles.margin.right }),
@@ -32,12 +33,14 @@ const TextComponent: React.FC<Props> = ({ textData }) => {
 
     const handleInputBlur = () => {
         setIsEditing(false);
+        //setData({key :textData.id , value :label});
     };
 
     const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             setIsEditing(false);
         }
+        setData({key :textData.id , value :label});
     };
 
     return (

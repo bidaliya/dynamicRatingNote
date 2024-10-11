@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, MenuProps, notification } from "antd";
 import {
   Props,
@@ -25,6 +25,14 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
     });
   };
 
+  const handleDataUpdate = (data: { key: number; value: string })=>{
+    componentsData.map((item, ind)=>{
+      if(item.id == data.key && item.type == 'text'){
+        item.label = data.value
+      }
+    })
+  }
+
   const downloadHandler = () => {
     handleDownloadClick(componentsData);
   };
@@ -40,7 +48,7 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
             handleMenuClick={handleMenuClick}
           />
         ) : (
-          <TextComponent key={component.id} textData={component as TextData} />
+          <TextComponent key={component.id} textData={component as TextData} setData = {handleDataUpdate}/>
         )
       )}
       <Button type="primary" onClick={downloadHandler}>
