@@ -29,6 +29,19 @@ export const handleDownloadClick = (componentsData: Array<TableComponent | TextC
                                     fill: table.label?.styles?.bgcolor || "FFFFFF",
                                 },
                             });
+
+                            const tableFooter = new Paragraph({
+                                children: [
+                                    new TextRun({
+                                        text: table.footer?.text,
+                                        color: table.footer?.styles?.color || "000000", // Default to black if no color is provided
+                                        bold: true,
+                                    }),
+                                ],
+                                shading: {
+                                    fill: table.label?.styles?.bgcolor || "FFFFFF",
+                                },
+                            });
                             
 
                             if (rows.length === 0) {
@@ -89,8 +102,9 @@ export const handleDownloadClick = (componentsData: Array<TableComponent | TextC
                             return [
                                 labelParagraph,
                                 new Table({
-                                    rows: [headerRow, ...tableRows],
+                                    rows: [headerRow, ...tableRows, ],
                                 }),
+                                table.footer.text.length > 0 ? tableFooter : new Paragraph(""),
                                 new Paragraph(""),
                             ];
                         }),
