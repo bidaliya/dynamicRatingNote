@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, MenuProps, notification } from "antd";
 import {
   Props,
@@ -10,6 +10,8 @@ import TextComponent from "./TextComponent";
 import { handleDownloadClick } from "./utilities/generateDocument";
 
 const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
+  const [data, setData] = useState<Array<TableData | TextData>>(componentsData);
+
   const menuItems: MenuProps["items"] = [
     {
       key: "1",
@@ -26,12 +28,23 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
   };
 
   const downloadHandler = () => {
-    handleDownloadClick(componentsData);
+    handleDownloadClick(data);
+  };
+
+  // Function to update the label of a text component.
+  const updateTextLabel = (id: number, newLabel: string) => {
+    setData((prevData) =>
+      prevData.map((component) =>
+        component.type === "text" && component.id === id
+          ? { ...component, label: newLabel }
+          : component
+      )
+    );
   };
 
   return (
     <div>
-      {componentsData.map((component) =>
+      {data.map((component) =>
         component.type === "table" ? (
           <TableComponent
             key={component.id}
@@ -40,7 +53,11 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
             handleMenuClick={handleMenuClick}
           />
         ) : (
-          <TextComponent key={component.id} textData={component as TextData} />
+          <TextComponent
+            key={component.id}
+            textData={component as TextData}
+            updateLabel={updateTextLabel}
+          />
         )
       )}
       <Button type="primary" onClick={downloadHandler}>
