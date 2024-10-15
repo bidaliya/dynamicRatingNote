@@ -11,6 +11,8 @@ import { handleDownloadClick } from "./utilities/generateDocument";
 
 const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
   const [data, setData] = useState<Array<TableData | TextData>>(componentsData);
+  // console.log({componentsData});
+  // console.log({data});
 
   const menuItems: MenuProps["items"] = [
     {

@@ -50,6 +50,8 @@ const TableComponent: React.FC<Props> = ({
     row.data.forEach((col, colIndex) => {
       rowData[`col${colIndex + 1}`] = col.value;
     });
+    // console.log({rowData});
+    
     return {
       key: rowIndex,
       ...rowData,
@@ -62,8 +64,8 @@ const TableComponent: React.FC<Props> = ({
   };
 
   const headerStyle = {
-    fontWeight: "bold"
-  }
+    fontWeight: "bold",
+  };
 
   return (
     <div key={tableData.id} style={{ position: "relative" }}>
@@ -76,9 +78,7 @@ const TableComponent: React.FC<Props> = ({
         tableLayout="auto"
         title={() => (
           <div style={{ ...flexStyle }}>
-            <span style={{...headerStyle }}>
-              {tableData.label.text}
-            </span>
+            <span style={{ ...headerStyle }}>{tableData.label.text}</span>
             <MenuComponent
               menuItems={menuItems}
               tableId={tableData.id}

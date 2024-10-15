@@ -70,7 +70,6 @@ const TextComponent: React.FC<Props> = React.memo(
               padding: "10px",
               cursor: textData.isEditable ? "text" : "default",
             }}
-            onClick={handleTextClick}
           >
             <Text
               style={{
