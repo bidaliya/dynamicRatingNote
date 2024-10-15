@@ -23,10 +23,11 @@
     "type": "table",
     "id": 2,
     "label": {
-      "text": "Rating Information",
+      "text": "",
       "styles": {
         "color": "",
-        "bgcolor": ""
+        "bgcolor": "",
+        "fontWeight": "bold"
       }
     },
     "footer": {
@@ -159,10 +160,11 @@
     "type": "table",
     "id": 3,
     "label": {
-      "text": "Brief Profile",
+      "text": "1. Brief Profile",
       "styles": {
         "color": "",
-        "bgColor": ""
+        "bgColor": "",
+        "fontWeight":"bold"
       }
     },
     "footer": {
@@ -275,7 +277,7 @@
     "type": "table",
     "id": 4,
     "label": {
-      "text": "Rating Recommendation:",
+      "text": "1.1 Rating Recommendation:",
       "styles": {
         "color": "",
         "bgColor": ""
@@ -355,7 +357,7 @@
     "type": "table",
     "id": 7,
     "label": {
-      "text": "Industry Classification:",
+      "text": "2. Industry Classification:",
       "styles": {
         "color": "",
         "bgColor": ""

@@ -26,13 +26,17 @@ const TableComponent: React.FC<Props> = ({
       title: col.value,
       dataIndex: `col${index + 1}`,
       key: `col${index + 1}`,
+      width: "auto",
       render: (text: string, record: any) => {
         const cellData = tableData.rows[record.key + 1]?.data[index];
         const bgColor = cellData?.bgColor || "#ffffff";
 
         return (
           <div
-            style={{ backgroundColor: bgColor, padding: "8px", width: "400px" }}
+            style={{
+              backgroundColor: bgColor,
+              padding: "4px",
+            }}
           >
             {text}
           </div>
@@ -57,6 +61,10 @@ const TableComponent: React.FC<Props> = ({
     justifyContent: "space-between",
   };
 
+  const headerStyle = {
+    fontWeight: "bold"
+  }
+
   return (
     <div key={tableData.id} style={{ position: "relative" }}>
       <Table
@@ -65,9 +73,10 @@ const TableComponent: React.FC<Props> = ({
         pagination={false}
         className="custom-bold-border"
         style={{ width: "70%" }}
+        tableLayout="auto"
         title={() => (
           <div style={{ ...flexStyle }}>
-            <span style={{ color: tableData.label?.styles?.color ?? "black" }}>
+            <span style={{...headerStyle }}>
               {tableData.label.text}
             </span>
             <MenuComponent
@@ -82,15 +91,12 @@ const TableComponent: React.FC<Props> = ({
         footer={
           tableData.footer?.text?.trim()
             ? () => (
-                <div
-                  style={{ ...flexStyle, fontStyle: "italic" }}
-                >
+                <div style={{ ...flexStyle, fontStyle: "italic" }}>
                   {tableData.footer.text}
                 </div>
               )
             : undefined
         }
-        
       />
     </div>
   );

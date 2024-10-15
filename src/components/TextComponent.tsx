@@ -72,11 +72,20 @@ const TextComponent: React.FC<Props> = React.memo(
             }}
             onClick={handleTextClick}
           >
-            <Text style={{ fontWeight: textData.heading?.styles?.fontWeight || "normal" }}>
+            <Text
+              style={{
+                fontWeight: textData.heading?.styles?.fontWeight || "normal",
+              }}
+            >
               {textData.heading?.text}
             </Text>
             <br />
-            <Text style={{ fontWeight: textData.description?.styles?.fontWeight || "normal" }}>
+            <Text
+              style={{
+                fontWeight:
+                  textData.description?.styles?.fontWeight || "normal",
+              }}
+            >
               {textData.description?.text}
             </Text>
           </div>
