@@ -63,8 +63,25 @@ const TextComponent: React.FC<Props> = React.memo(
             autoFocus
             style={{ width: "100%" }}
           />
+        ) : textData.typeOfContent === "box" ? (
+          <div
+            style={{
+              border: textData.styles?.border || "1px solid black",
+              padding: "10px",
+              cursor: textData.isEditable ? "text" : "default",
+            }}
+            onClick={handleTextClick}
+          >
+            <Text style={{ fontWeight: textData.heading?.styles?.fontWeight || "normal" }}>
+              {textData.heading?.text}
+            </Text>
+            <br />
+            <Text style={{ fontWeight: textData.description?.styles?.fontWeight || "normal" }}>
+              {textData.description?.text}
+            </Text>
+          </div>
         ) : (
-          <Text //for labels
+          <Text
             onClick={handleTextClick}
             style={{
               cursor: textData.isEditable ? "text" : "default",

@@ -59,7 +59,8 @@ const DynamicScreen: React.FC<Props> = ({ componentsData }) => {
             updateLabel={updateTextLabel}
           />
         )
-      )}
+      )} 
+      <br />
       <Button type="primary" onClick={downloadHandler}>
         Download DOCX
       </Button>

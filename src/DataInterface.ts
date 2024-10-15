@@ -1,19 +1,21 @@
 export interface Styles {
   color?: string;
   bgcolor?: string;
-  margin: {
-    left: string;
-    top: string;
-    right: string;
-    bottom: string;
+  margin?: {
+    left?: string;
+    top?: string;
+    right?: string;
+    bottom?: string;
   };
-  textAlignment: "left" | "right";
+  textAlignment?: "left" | "right";
+  border?: string;
+  fontWeight?: string;
 }
 
 export interface ColumnData {
   value: string;
   bgColor: string;
-  styling: Styles;
+  styling?: Styles;
 }
 
 export interface TableRow {
@@ -21,16 +23,14 @@ export interface TableRow {
   data: ColumnData[];
 }
 
-
 export interface Label {
   text: string;
   styles?: Styles;
 }
 
-
 export interface Footer {
   text: string;
-  styles?:Styles;
+  styles?: Styles;
 }
 
 export interface TableComponent {
@@ -47,9 +47,17 @@ export interface TextComponent {
   label: string;
   link?: string;
   isEditable: boolean;
-  styles: Styles;
+  styles?: Styles;
+  typeOfContent?: string;
+  heading?: {
+    text: string;
+    styles?: Styles;
+  };
+  description?: {
+    text: string;
+    styles?: Styles;
+  };
 }
-
 
 export type DynamicComponent = TableComponent | TextComponent;
 

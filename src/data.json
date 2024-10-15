@@ -1,7 +1,27 @@
 [
   {
-    "type": "table",
+    "type": "text",
+    "typeOfContent": "box",
     "id": 1,
+    "heading": {
+      "text": "Part A: Rating Committee Note (Note version: RCN format for NBFC (initial) dated: April 13, 2024)",
+      "styles": {
+        "fontWeight": "bold"
+      }
+    },
+    "description": {
+      "text": "Mr/Ms.__RC member/Director of IVRPL is on the Board of this entity. He/she is not involved in the rating process in any manner and this note has not been sent to him/her: Not Applicable",
+      "styles": {
+        "fontWeight": "bold"
+      }
+    },
+    "styles": {
+      "border": "2px solid black"
+    }
+  },
+  {
+    "type": "table",
+    "id": 2,
     "label": {
       "text": "Rating Information",
       "styles": {
@@ -10,7 +30,7 @@
       }
     },
     "footer": {
-      "text": "Note: FY24 (Prov.) is Provisional",
+      "text": "* The company has provided an undertaking that there will not be any major deviation between audited and provisional figures and the deviation will be less than 5%. In case of larger deviation, the same will be presented before the committee.",
       "styles": {
         "color": "",
         "bgcolor": ""
@@ -18,14 +38,13 @@
     },
     "rows": [
       {
-        "bgColor": "#ffffff",
         "data": [
           {
             "value": "Name of the Entity",
             "bgColor": "#ffffff"
           },
           {
-            "value": "XX",
+            "value": "Money2Me Finance Private Limited (MFPL)",
             "bgColor": "#ffffff"
           }
         ]
@@ -34,11 +53,11 @@
         "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Date of Last Press Release",
+            "value": "Mandate Date",
             "bgColor": "#ffffff"
           },
           {
-            "value": "XX",
+            "value": "May 31, 2024",
             "bgColor": "#ffffff"
           }
         ]
@@ -51,7 +70,7 @@
             "bgColor": "#ffffff"
           },
           {
-            "value": "XX",
+            "value": "September 16,2024",
             "bgColor": "#ffffff"
           }
         ]
@@ -64,7 +83,7 @@
             "bgColor": "#ffffff"
           },
           {
-            "value": "FY23 (Audited) and FY24(Prov.)",
+            "value": "FY21 to FY23 (Audited), FY24 (Provisional) and FY25 to FY27 (Projected)",
             "bgColor": "#ffffff"
           }
         ]
@@ -77,7 +96,7 @@
             "bgColor": "#ffffff"
           },
           {
-            "value": "Bank Loan Rating / Issuer/FD (Surveillance)",
+            "value": "Initial",
             "bgColor": "#ffffff"
           }
         ]
@@ -90,7 +109,7 @@
             "bgColor": "#ffffff"
           },
           {
-            "value": "Bank Facilities/NCD/Issuer/FD",
+            "value": "BLR",
             "bgColor": "#ffffff"
           }
         ]
@@ -103,7 +122,7 @@
             "bgColor": "#ffffff"
           },
           {
-            "value": "Rs. XX crore",
+            "value": "30.00 Crore",
             "bgColor": "#ffffff"
           }
         ]
@@ -116,150 +135,7 @@
             "bgColor": "#ffffff"
           },
           {
-            "value": "Term Loan: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
+            "value": "30.00 Crore",
             "bgColor": "#ffffff"
           }
         ]
@@ -281,258 +157,258 @@
   },
   {
     "type": "table",
-    "id": 2,
+    "id": 3,
     "label": {
-      "text": "Rating Information 2",
+      "text": "Brief Profile",
       "styles": {
         "color": "",
-        "bgcolor": ""
+        "bgColor": ""
       }
     },
     "footer": {
-      "text": "",
+      "text": "something",
       "styles": {
         "color": "",
-        "bgcolor": ""
+        "bgColor": ""
       }
     },
     "rows": [
       {
-        "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Name of the Entity",
-            "bgColor": "#ffffff"
+            "value": "1.",
+            "styles": {}
           },
           {
-            "value": "XX",
-            "bgColor": "#ffffff"
+            "value": "Industrial group",
+            "styles": {}
+          },
+          {
+            "value": "Money2Me Finance Private Limited",
+            "styles": {}
           }
         ]
       },
       {
-        "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Date of Last Press Release",
-            "bgColor": "#ffffff"
+            "value": "2.",
+            "styles": {}
           },
           {
-            "value": "XX",
-            "bgColor": "#ffffff"
+            "value": "Date of Incorporation",
+            "styles": {}
+          },
+          {
+            "value": "14th March, 2019",
+            "styles": {}
           }
         ]
       },
       {
-        "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Date of receipt of complete information",
-            "bgColor": "#ffffff"
+            "value": "3.",
+            "styles": {}
           },
           {
-            "value": "XX",
-            "bgColor": "#ffffff"
+            "value": "Year of commencement of business",
+            "styles": {}
+          },
+          {
+            "value": "13th July, 2016",
+            "styles": {}
           }
         ]
       },
       {
-        "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Review Period",
-            "bgColor": "#ffffff"
+            "value": "4.",
+            "styles": {}
           },
           {
-            "value": "FY23 (Audited) and FY24(Prov.)",
-            "bgColor": "#ffffff"
+            "value": "Controlling office",
+            "styles": {}
+          },
+          {
+            "value": "702, Hari Om IT Park, Near Delta Garden Complex, MIDC Road, Mahajanwadi, Mira Road East, Thane - 401107",
+            "styles": {}
           }
         ]
       },
       {
-        "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Type of Rating",
-            "bgColor": "#ffffff"
+            "value": "5.",
+            "styles": {}
           },
           {
-            "value": "Bank Loan Rating / Issuer/FD (Surveillance)",
-            "bgColor": "#ffffff"
+            "value": "Nature of business",
+            "styles": {}
+          },
+          {
+            "value": "NBFC - Gold loans",
+            "styles": {}
           }
         ]
       },
       {
-        "bgColor": "#ffffff",
         "data": [
           {
-            "value": "Instrument",
-            "bgColor": "#ffffff"
+            "value": "6.",
+            "styles": {}
           },
           {
-            "value": "Bank Facilities/NCD/Issuer/FD",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Amount of Facility to be rated",
-            "bgColor": "#ffffff"
+            "value": "Constitution",
+            "styles": {}
           },
           {
-            "value": "Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Long Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Term Loan: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
-          }
-        ]
-      },
-      {
-        "bgColor": "#ffffff",
-        "data": [
-          {
-            "value": "Short Term",
-            "bgColor": "#ffffff"
-          },
-          {
-            "value": "Bank Guarantee: Rs. XX crore",
-            "bgColor": "#ffffff"
+            "value": "Private Limited",
+            "styles": {}
           }
         ]
       }
     ]
   },
   {
-    "type": "text",
-    "id": 3,
-    "label": "My label",
-    "isEditable": true,
-    "styles": {
-      "margin": {
-        "right": "65px",
-        "top": "10px",
-        "left": "300px"
-      },
-      "alignment": "left"
-    },
-    "link": "https://google.com"
-  },
-  {
-    "type": "text",
+    "type": "table",
     "id": 4,
-    "label": "My label 2",
-    "isEditable": true,
-    "styles": {
-      "margin": {
-        "left": "400px",
-        "top": "20px"
+    "label": {
+      "text": "Rating Recommendation:",
+      "styles": {
+        "color": "",
+        "bgColor": ""
       }
     },
-    "link": "https://www.youtube.com/"
+    "footer": {
+      "text": "",
+      "styles": {
+        "color": "",
+        "bgColor": ""
+      }
+    },
+    "rows": [
+      {
+        "data": [
+          {
+            "value": "Rating Model used",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "NBFC",
+            "styles": {}
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "value": "Model implied rating",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "IVR BBB/Stable/IVR A3+ (Based on balance sheet as on March 31, 2024 (Provisional))",
+            "styles": {}
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "value": "Analyst recommended rating/Outlook/Placed Under Rating Watch/Removal from Rating Watch",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "IVR BBB-/Stable/IVR A3",
+            "styles": {}
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "value": "In case different rating is recommended, rationale/justification",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "Constraint of Rating against Model:\n- Increasing competition from banks in the gold loan segments\n- Low scale of operations albeit improving",
+            "styles": {}
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "value": "Mention reason for outlook/Rating placed under watch/Removal from Rating Watch",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "IVR believes MFPL continues to benefit from experienced promoters and moderate scale of operations. On the back of improvement in...",
+            "styles": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "id": 7,
+    "label": {
+      "text": "Industry Classification:",
+      "styles": {
+        "color": "",
+        "bgColor": ""
+      }
+    },
+    "footer": {
+      "text": "",
+      "styles": {
+        "color": "",
+        "bgColor": ""
+      }
+    },
+    "rows": [
+      {
+        "data": [
+          {
+            "value": "Macro-Economic Indicator",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "Sector",
+            "styles": {}
+          },
+          {
+            "value": "Industry",
+            "styles": {}
+          },
+          {
+            "value": "Basic Industry",
+            "styles": {}
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "value": "Financial Services",
+            "styles": { "fontWeight": "bold" }
+          },
+          {
+            "value": "Financial Services",
+            "styles": {}
+          },
+          {
+            "value": "Finance",
+            "styles": {}
+          },
+          {
+            "value": "Non-Banking Financial Company (NBFC)",
+            "styles": {}
+          }
+        ]
+      }
+    ]
   }
 ]

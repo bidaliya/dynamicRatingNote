@@ -64,7 +64,6 @@ const TableComponent: React.FC<Props> = ({
         columns={columns}
         pagination={false}
         className="custom-bold-border"
-        scroll={{ y: 600 }}
         style={{ width: "70%" }}
         title={() => (
           <div style={{ ...flexStyle }}>
@@ -84,13 +83,14 @@ const TableComponent: React.FC<Props> = ({
           tableData.footer?.text?.trim()
             ? () => (
                 <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
+                  style={{ ...flexStyle, fontStyle: "italic" }}
                 >
                   {tableData.footer.text}
                 </div>
               )
             : undefined
         }
+        
       />
     </div>
   );
